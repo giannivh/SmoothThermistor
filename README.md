@@ -3,7 +3,7 @@ A flexible thermistor reading library. Calculates the temperature based on the S
 
 # Installation
 
-Please see https://www.arduino.cc/en/Guide/Libraries
+This library is pending acceptance to be included in the Arduino Library Manager. For now you'll have install it manually, please see https://www.arduino.cc/en/Guide/Libraries
 
 # Circuit
 
@@ -19,7 +19,7 @@ The easy and most common circuit looks as follows:
 ```
 
 However, to get more accurate readings, you can use the 3.3V pin on the Arduino, which has less noise. 
-Make sure your thermistor is fed using 3.3v, along with the AREF pin.
+Make sure your thermistor is fed using 3.3V, along with the AREF pin.
 The circuits looks as follows:
 
 ```
@@ -33,12 +33,12 @@ The circuits looks as follows:
 
 # Usage
 
-Include the library
+Include the library:
 ```cpp
 #include <SmoothThermistor.h>
 ```
 
-Create an instance using the most commonly used 10K thermistor
+Create an instance using the most commonly used 10K thermistor:
 ```cpp
 SmoothThermistor smoothThermistor(A0);
 ```
@@ -68,7 +68,7 @@ See the example inside the repository.
 
 ## ADC size
 
-The ADC size can be one of the following values:
+The [ADC size](https://en.wikipedia.org/wiki/Analog-to-digital_converter) can be one of the following values:
 ```cpp
 ADC_SIZE_8_BIT 
 ADC_SIZE_10_BIT

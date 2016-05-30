@@ -3,7 +3,7 @@ A flexible thermistor reading library. Calculates the temperature based on the S
 
 # Installation
 
-This library is pending acceptance to be included in the Arduino Library Manager. For now you'll have install it manually, please see https://www.arduino.cc/en/Guide/Libraries
+SmoothThermistor can be found and installed through the Arduino Library Manager.
 
 # Circuit
 

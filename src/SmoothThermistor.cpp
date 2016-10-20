@@ -35,8 +35,8 @@
 #include "SmoothThermistor.h"
 #include <math.h>
 
-SmoothThermistor::SmoothThermistor(uint8_t analogPin, ADCSize adcSize, uint16_t nominalResistance, 
-                                   uint16_t seriesResistance, uint16_t betaCoefficient, uint8_t nominalTemperature, 
+SmoothThermistor::SmoothThermistor(uint8_t analogPin, ADCSize adcSize, uint32_t nominalResistance, 
+                                   uint32_t seriesResistance, uint16_t betaCoefficient, uint8_t nominalTemperature, 
                                    uint8_t samples) {
 
     _analogPin = analogPin;

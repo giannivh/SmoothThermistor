@@ -63,8 +63,8 @@ class SmoothThermistor {
      */
     SmoothThermistor(uint8_t analogPin,
                      ADCSize adcSize = ADC_SIZE_10_BIT,
-                     uint16_t nominalResistance = DEFAULT_NOMINAL_RESISTANCE,
-                     uint16_t seriesResistance = DEFAULT_SERIES_RESISTANCE,
+                     uint32_t nominalResistance = DEFAULT_NOMINAL_RESISTANCE,
+                     uint32_t seriesResistance = DEFAULT_SERIES_RESISTANCE,
                      uint16_t betaCoefficient = DEFAULT_BETA_COEFFICIENT,
                      uint8_t nominalTemperature = DEFAULT_NOMINAL_TEMPERATURE,
                      uint8_t samples = DEFAULT_SAMPLES);
@@ -76,8 +76,8 @@ class SmoothThermistor {
 
     uint8_t  _analogPin;
     ADCSize  _adcSize;
-    uint16_t _nominalResistance;
-    uint16_t _seriesResistance;
+    uint32_t _nominalResistance;
+    uint32_t _seriesResistance;
     uint16_t _betaCoefficient;
     uint8_t  _nominalTemperature;
     uint8_t  _samples;

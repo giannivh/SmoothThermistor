@@ -41,16 +41,13 @@
 #define DEFAULT_BETA_COEFFICIENT    3950
 #define DEFAULT_NOMINAL_TEMPERATURE 25
 #define DEFAULT_SAMPLES             10
+#define ADC_SIZE_8_BIT              8
+#define ADC_SIZE_10_BIT             10
+#define ADC_SIZE_12_BIT             12
+#define ADC_SIZE_16_BIT             16
 
 class SmoothThermistor {
   public:
-
-    enum ADCSize {
-        ADC_SIZE_8_BIT = 8,
-        ADC_SIZE_10_BIT = 10,
-        ADC_SIZE_12_BIT = 12,
-        ADC_SIZE_16_BIT = 16
-    };
 
     /**
      * @param analogPin          The analog pin where the thermistor is connected to.
@@ -62,7 +59,7 @@ class SmoothThermistor {
      * @param samples            The number of samples to take for temperature smoothing.
      */
     SmoothThermistor(uint8_t analogPin,
-                     ADCSize adcSize = ADC_SIZE_10_BIT,
+                     uint16_t adcSize = ADC_SIZE_10_BIT,
                      uint32_t nominalResistance = DEFAULT_NOMINAL_RESISTANCE,
                      uint32_t seriesResistance = DEFAULT_SERIES_RESISTANCE,
                      uint16_t betaCoefficient = DEFAULT_BETA_COEFFICIENT,
@@ -75,7 +72,7 @@ class SmoothThermistor {
   private:
 
     uint8_t  _analogPin;
-    ADCSize  _adcSize;
+    uint16_t _adcSize;
     uint32_t _nominalResistance;
     uint32_t _seriesResistance;
     uint16_t _betaCoefficient;

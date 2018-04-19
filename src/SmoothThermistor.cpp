@@ -49,9 +49,11 @@ SmoothThermistor::SmoothThermistor(uint8_t analogPin, uint16_t adcSize, uint32_t
 }
 
 void SmoothThermistor::useAREF(bool aref) {
-#IFNDEF ESP32
+  
+#IF !defined(ESP32) || !defined(ESP8266)
     analogReference(aref? EXTERNAL: DEFAULT);
 #ENDIF
+  
 }
 
 float SmoothThermistor::temperature(void) {
